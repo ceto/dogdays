@@ -1,0 +1,14 @@
+// bower:scss
+@import "bower_components/foundation-sites/scss/foundation.scss";
+// endbower
+@import "prefs";
+@include foundation-everything;
+
+@import "base";
+@import "layout";
+@import "header";
+@import "footer";
+@import "hero";
+@import "navs";
+@import "modules";
+@import "page";

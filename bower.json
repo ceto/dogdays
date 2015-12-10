@@ -1,0 +1,26 @@
+{
+  "name": "dogdays",
+  "version": "1.0.0",
+  "authors": [
+    "Gabor Szabo <szabogabi@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "~6.0.5"
+  },
+  "overrides": {
+    "foundation-sites": {
+      "main": [
+        "scss/foundation.scss",
+        "js/foundation.js"
+      ]
+    }
+  }
+}
