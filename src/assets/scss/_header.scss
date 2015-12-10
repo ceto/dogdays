@@ -1,0 +1,38 @@
+.siteheader {
+
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  z-index: 1;
+  padding:.5rem 0;
+  @include breakpoint(medium) {
+  }
+}
+
+.sitelogo {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+
+  display: block;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-image: url('../images/logo_only.png');
+  background-size: auto 100%;
+  width:2rem;
+  height: 2rem;
+  //background-color: rgba($primary-color,.5);
+  @include breakpoint(medium) {
+    margin:1rem 0;
+    height:5rem;
+    width:10rem;
+  }
+}
+
+.sitenav {
+  @include clearfix();
+  @include breakpoint(medium) {
+    margin:2rem 0;
+  }
+}

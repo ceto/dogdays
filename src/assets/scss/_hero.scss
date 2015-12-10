@@ -1,0 +1,27 @@
+.hero {
+  position: relative;
+  background-color: #ababab;
+
+  //min-height: 35rem;
+  @include breakpoint(medium) {
+      height:90vh;
+      min-height: 35rem;
+      max-height: 38rem;
+  }
+}
+
+.hero__content {
+ padding:8rem 0 4rem;
+
+ @include breakpoint(medium) {
+  padding:4rem 0;
+  position: absolute;
+  top:50%;
+  transform: translate(0, -50%);
+  //width: 50%;
+  max-width: 33rem;
+ }
+ @include breakpoint(large) {
+  max-width: 45rem;
+  }
+}

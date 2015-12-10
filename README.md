@@ -1,6 +1,6 @@
-# apnoe
+# Dog Days Yoga Wear
 
-> Custom website for alvasiapnoe.hu
+> Custom website for dogdayswear.com
 
 ## To get started
 
