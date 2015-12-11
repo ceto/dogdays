@@ -49,10 +49,18 @@
 }
 
 .hero__title {
+  color:$primary-color;
+  //font-weight: $global-weight-bold;
   margin-top: 0;
-  //text-transform: uppercase;
+  text-transform: uppercase;
+  @include breakpoint(medium) {
+    font-size: 3rem;
+  }
 }
 
 .hero__text {
   font-size: 1.25rem;
+  @include breakpoint(medium) {
+    font-size: 1.5rem;
+  }
 }

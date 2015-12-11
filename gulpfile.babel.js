@@ -160,7 +160,7 @@ gulp.task('images', () =>
 // 'gulp fonts' -- copies your fonts to the temporary assets folder
 gulp.task('fonts', () =>
   gulp.src('src/assets/fonts/**/*')
-    .pipe(gulp.dest('.tmp/assets/images'))
+    .pipe(gulp.dest('.tmp/assets/fonts'))
     .pipe($.size({title: 'fonts'}))
 );
 

@@ -34,6 +34,9 @@
   // border-top:1px solid $primary-color;
   // border-bottom:1px solid $primary-color;
   margin: 4rem 0;
+  &.ucso{
+    margin-bottom: 0;
+  }
 }
 
 
@@ -84,12 +87,23 @@
       padding-right: 0;
       //padding-left: 2.5rem;
     }
+    .ucso & {
+      padding-bottom: 2rem;
+    }
   }
   @include breakpoint(large) {
    padding-bottom:12rem;
    padding-top: 2rem;
+   .ucso & {
+      padding-bottom: 2rem;
+    }
+  }
+
+  .ucso & {
+    padding-bottom: 2rem;
   }
 }
+
 
 .photostrip {
   margin:3rem 0 3em;
