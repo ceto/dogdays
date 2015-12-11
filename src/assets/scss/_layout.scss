@@ -9,12 +9,29 @@
   padding:8rem 0;
 }
 
-.allfeat {
+
+.inverseblock {
+  background-color: $primary-color;
+  color:$white;
+}
+
+.grayblock {
+  background-color: $secondary-color;
+  color:$white;
+}
+.darkblock {
+  background-color: $body-font-color;
+  color:$white;
+}
+
+.feats {
+
 }
 .featblock {
   position: relative;
   // border-top:1px solid $primary-color;
   // border-bottom:1px solid $primary-color;
+  margin: 4rem 0;
 }
 
 
@@ -26,20 +43,26 @@
   @include breakpoint(medium) {
     margin:0;
     position: absolute;
-    width:calc(33.333% - 1.25rem);
+    width:33.333%;
     right:0;
     top:0;
     bottom:0;
+
+    .featblock--flip & {
+      right:auto;
+      left:0;
+      text-align: left;
+    }
   }
-  @include breakpoint(large) {
-   width:calc(50% - 1.25rem);
+
+  @include breakpoint(xlarge) {
+   width: 40%;
+  }
+
+  @include breakpoint(xxlarge) {
+   width: 50%;
   }
   img {
-    // width:auto;
-    // max-width: none;
-    //height:100%;
-    // max-height: 100%;
-
     @include breakpoint(medium) {
       //float:right;
       width:auto;
@@ -49,8 +72,19 @@
   }
 }
 .featblock__text {
-  padding:4rem 0;
+  padding:2rem 0;
+  max-width: 30rem;
+  @include breakpoint(medium) {
+    padding-bottom: 8rem;
+    padding-top: 2rem;
+    //padding-right: 2.5rem;
+    .featblock--flip & {
+      padding-right: 0;
+      //padding-left: 2.5rem;
+    }
+  }
   @include breakpoint(large) {
-   padding:6rem 0;
+   padding-bottom:12rem;
+   padding-top: 2rem;
   }
 }

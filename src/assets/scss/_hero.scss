@@ -1,20 +1,24 @@
 .hero {
   position: relative;
   background-color: #ababab;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   //min-height: 35rem;
   @include breakpoint(medium) {
-      height:90vh;
+      height:calc(100vh - 10rem);
       min-height: 35rem;
-      max-height: 38rem;
+      max-height: 45rem;
   }
 }
+
 
 .hero__content {
  padding:8rem 0 4rem;
 
  @include breakpoint(medium) {
-  padding:4rem 0;
+  padding:4rem 0 0;
   position: absolute;
   top:50%;
   transform: translate(0, -50%);
@@ -24,4 +28,8 @@
  @include breakpoint(large) {
   max-width: 45rem;
   }
+}
+
+.hero--home {
+  background-image: url('../images/homehero.jpg');
 }
