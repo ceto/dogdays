@@ -1,0 +1,27 @@
+html, body {
+
+  @include breakpoint(medium) {
+    font-size: 87.5%;
+  }
+  @include breakpoint(large) {
+    font-size: 100%;
+  }
+
+  @include breakpoint(xxlarge) {
+    font-size: 112.5%;
+  }
+}
+
+
+.button {
+  text-transform: uppercase;
+  font-weight: $global-weight-bold;
+}
+
+blockquote {
+  p {
+    font-size: 1.5rem;
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+  }
+}
