@@ -99,6 +99,7 @@ gulp.task('scripts', () =>
   // NOTE: The order here is important since it's concatenated in order from
   // top to bottom, so you want vendor scripts etc on top
   gulp.src([
+    'bower_components/owl.carousel/dist/owl.carousel.min.js',
     'src/assets/javascript/vendor.js',
     'src/assets/javascript/main.js'
   ])
