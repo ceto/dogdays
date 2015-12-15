@@ -8,9 +8,9 @@
   //min-height: 30rem;
 
   @include breakpoint(medium) {
-    height: calc(100vh);
+    height: 100vh;
     min-height: 35rem;
-    max-height: 50rem;
+    max-height: 45rem;
   }
 }
 

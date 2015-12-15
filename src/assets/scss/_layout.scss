@@ -5,11 +5,27 @@
   }
 }
 
+.row.container.fullwidth {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: none;
+
+  @include breakpoint(medium) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  > .columns {
+    padding:0;
+  }
+}
+
 .ps {
+  @include clearfix();
   padding:8rem 0;
 }
 .ps--kispad {
- padding:6rem 0;
+ padding:4rem 0;
 }
 
 .inverseblock {
@@ -31,12 +47,6 @@
 }
 .featblock {
   position: relative;
-  // border-top:1px solid $primary-color;
-  // border-bottom:1px solid $primary-color;
-  margin: 4rem 0;
-  &.ucso{
-    margin-bottom: 0;
-  }
 }
 
 
@@ -77,36 +87,41 @@
   }
 }
 .featblock__text {
+  background-color: #fff;
   padding:2rem 0;
+  //position: relative;
   //max-width: 45rem;
   @include breakpoint(medium) {
-    padding-bottom: 8rem;
-    padding-top: 2rem;
-    //padding-right: 2.5rem;
+    height: 100vh;
+    max-height: 45rem;
     .featblock--flip & {
-      padding-right: 0;
-      //padding-left: 2.5rem;
-    }
-    .ucso & {
-      padding-bottom: 2rem;
     }
   }
   @include breakpoint(large) {
-   padding-bottom:12rem;
-   padding-top: 2rem;
-   .ucso & {
-      padding-bottom: 2rem;
-    }
+    padding:4rem 0;
   }
 
-  .ucso & {
-    padding-bottom: 2rem;
+  .featblock--narrow &{
+    @include breakpoint(medium) {
+      height: 66vh;
+      max-height: 35rem;
+    }
   }
 }
 
 
+.featblock__text__inner {
+  //position: relative;
+  @include breakpoint(medium) {
+    position: relative;
+    transform: translateY(-50%);
+    top:50%;
+  }
+
+}
+
 .photostrip {
-  margin:3rem 0 3em;
+  margin:0 0 0;
   img {
     // width: auto;
     // max-width: none;
@@ -120,5 +135,54 @@
     // height: 20rem;
     // max-height: 33vh;
     // background-color: red;
+  }
+}
+
+.thelookbook {
+  //@include clearfix();
+  > .columns {
+    padding-left:.75rem;
+    padding-right: .75rem;
+    @include breakpoint(large) {
+      padding-left:.5rem;
+      padding-right: .5rem;
+    }
+  }
+}
+
+.grid-sizer {
+  width: 50%;
+  @include breakpoint(tablet) {
+    width: 33.333%;
+  }
+  @include breakpoint(xxlarge) {
+    width: 25%;
+  }
+
+}
+.grid-item {
+  width: 50%;
+  padding:.5rem;
+  @include breakpoint(tablet) {
+    width: 33.333%;
+  }
+  @include breakpoint(large) {
+    padding:.75rem;
+  }
+  @include breakpoint(xxlarge) {
+    width: 25%;
+  }
+  > a {
+    display: block;
+  }
+}
+
+.grid-item--double {
+  width: 100%;
+  @include breakpoint(tablet) {
+    width: 66.666%;
+  }
+  @include breakpoint(xxlarge) {
+    width: 50%;
   }
 }
