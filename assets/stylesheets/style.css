@@ -1769,7 +1769,7 @@ i {
 
 strong,
 b {
-  font-weight: 500;
+  font-weight: 400;
   line-height: inherit; }
 
 small {
@@ -1783,9 +1783,9 @@ h4,
 h5,
 h6 {
   font-family: "Gotham Rounded", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
-  color: inherit;
+  color: #FF5300;
   text-rendering: optimizeLegibility;
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -1809,7 +1809,7 @@ h3 {
   font-size: 1.1875rem; }
 
 h4 {
-  font-size: 1.125rem; }
+  font-size: 1.1875rem; }
 
 h5 {
   font-size: 1.0625rem; }
@@ -1825,9 +1825,9 @@ h6 {
   h3 {
     font-size: 1.5625rem; }
   h4 {
-    font-size: 1.25rem; }
+    font-size: 1.5625rem; }
   h5 {
-    font-size: 1.125rem; }
+    font-size: 1.375rem; }
   h6 {
     font-size: 1rem; } }
 
@@ -1877,7 +1877,7 @@ dl {
   margin-bottom: 1rem; }
   dl dt {
     margin-bottom: 0.3rem;
-    font-weight: 500; }
+    font-weight: 400; }
 
 blockquote {
   margin: 0 0 1rem;
@@ -2352,7 +2352,7 @@ select {
   margin-top: -0.5rem;
   margin-bottom: 1rem;
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: 400;
   color: #ec5840; }
   .form-error.is-visible {
     display: block; }
@@ -3627,7 +3627,7 @@ table {
     border: 1px solid #f1f1f1;
     background-color: #fefefe; }
   caption {
-    font-weight: 500;
+    font-weight: 400;
     padding: 0.5rem 0.625rem 0.625rem; }
   thead,
   tfoot {
@@ -3641,7 +3641,7 @@ table {
     tfoot th,
     tfoot td {
       padding: 0.5rem 0.625rem 0.625rem;
-      font-weight: 500;
+      font-weight: 400;
       text-align: left; }
   tbody tr:nth-child(even) {
     background-color: #f1f1f1; }
@@ -3925,26 +3925,34 @@ table.hover tr:nth-of-type(even):hover {
   font-weight: 700;
   font-style: italic; }
 
-@media screen and (min-width: 40em) {
-  html, body {
-    font-size: 87.5%; } }
-
-@media screen and (min-width: 64em) {
-  html, body {
-    font-size: 100%; } }
-
 @media screen and (min-width: 100em) {
   html, body {
     font-size: 112.5%; } }
 
 .button {
   text-transform: uppercase;
-  font-weight: 500; }
+  font-weight: 400; }
 
 blockquote p {
   font-size: 1.5rem;
   font-family: 'Georgia', serif;
   font-weight: 700; }
+
+.inverseblock a {
+  color: inherit; }
+  .inverseblock a:hover, .inverseblock a:focus {
+    color: #fff; }
+
+.inverseblock h1, .inverseblock h2, .inverseblock h3, .inverseblock h4, .inverseblock h5, .inverseblock h6 {
+  color: inherit;
+  opacity: .75; }
+
+* + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
+  margin-top: 3rem; }
+
+h4, h5, h6 {
+  color: inherit;
+  opacity: .75; }
 
 @media screen and (min-width: 40em) {
   .row.container {
@@ -3973,9 +3981,12 @@ blockquote p {
 .ps--kispad {
   padding: 4rem 0; }
 
+.lightblock {
+  background-color: #eaeaea; }
+
 .inverseblock {
   background-color: #FF5300;
-  color: #fefefe; }
+  color: #fff; }
 
 .grayblock {
   background-color: #4B4F54;
@@ -3990,7 +4001,7 @@ blockquote p {
 
 .featblock__ill {
   margin: 0 -1.25rem;
-  text-align: right;
+  text-align: left;
   overflow: hidden; }
   @media screen and (min-width: 40em) {
     .featblock__ill {
@@ -4004,9 +4015,9 @@ blockquote p {
         right: auto;
         left: 0;
         text-align: left; } }
-  @media screen and (min-width: 75em) {
+  @media screen and (min-width: 64em) {
     .featblock__ill {
-      width: 40%; } }
+      width: 50%; } }
   @media screen and (min-width: 40em) {
     .featblock__ill img {
       width: auto;
@@ -4014,15 +4025,15 @@ blockquote p {
       height: 100%; } }
 
 .featblock__text {
-  background-color: #fff;
   padding: 2rem 0; }
   @media screen and (min-width: 40em) {
     .featblock__text {
-      height: 100vh;
-      max-height: 45rem; } }
+      height: 40rem;
+      max-height: 50rem; } }
   @media screen and (min-width: 64em) {
     .featblock__text {
-      padding: 4rem 0; } }
+      height: 100vh;
+      padding: 4rem 12% 4rem 0; } }
   @media screen and (min-width: 40em) {
     .featblock--narrow .featblock__text {
       height: 66vh;
@@ -4050,7 +4061,7 @@ blockquote p {
   @media screen and (min-width: 48em) {
     .grid-sizer {
       width: 33.333%; } }
-  @media screen and (min-width: 100em) {
+  @media screen and (min-width: 75em) {
     .grid-sizer {
       width: 25%; } }
 
@@ -4063,7 +4074,7 @@ blockquote p {
   @media screen and (min-width: 64em) {
     .grid-item {
       padding: .75rem; } }
-  @media screen and (min-width: 100em) {
+  @media screen and (min-width: 75em) {
     .grid-item {
       width: 25%; } }
   .grid-item > a {
@@ -4074,7 +4085,7 @@ blockquote p {
   @media screen and (min-width: 48em) {
     .grid-item--double {
       width: 66.666%; } }
-  @media screen and (min-width: 100em) {
+  @media screen and (min-width: 75em) {
     .grid-item--double {
       width: 50%; } }
 
@@ -4115,7 +4126,7 @@ blockquote p {
     margin: 2rem 0; } }
 
 .sitefooter {
-  padding: 4rem 0 2rem; }
+  padding: 4rem 0 3rem; }
 
 .bottomblock {
   position: relative;
@@ -4129,7 +4140,32 @@ blockquote p {
   transform: scale(1.333); }
 
 .copyright {
-  margin: 4rem 0 0; }
+  margin: 0 0 0;
+  font-size: .875rem; }
+
+.flogo {
+  max-width: 21rem; }
+
+.fsocials {
+  list-style-type: none;
+  margin: 1.5rem auto 0;
+  padding: 0;
+  font-size: .75rem;
+  line-height: 1;
+  font-weight: 400; }
+  .fsocials li {
+    display: inline-block;
+    width: 6.5rem;
+    padding: 0;
+    margin: 0 0 2rem 0; }
+    .fsocials li a i {
+      margin: 0 auto .5rem;
+      display: block;
+      line-height: 2.5;
+      width: 2.75em;
+      height: 2.75em;
+      border-radius: 50%;
+      border: 2px solid currentColor; }
 
 .hero {
   position: relative;
@@ -4155,14 +4191,12 @@ blockquote p {
       position: absolute;
       top: 50%;
       left: 50%;
+      width: 80%;
+      max-width: 43rem;
       transform: translate(-50%, -50%); } }
   @media screen and (min-width: 64em) {
     .hero__content {
-      padding: 2rem 2rem;
-      max-width: 66.666%; } }
-  @media screen and (min-width: 75em) {
-    .hero__content {
-      max-width: 50%; } }
+      padding: 2rem 2rem; } }
 
 .hero--home {
   background-image: url("../images/homehero.jpg"); }
@@ -4192,7 +4226,7 @@ blockquote p {
 
 .menu > li > a {
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 400;
   color: #0a0a0a; }
 
 .owl-carousel .animated {
