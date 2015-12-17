@@ -1,5 +1,9 @@
 .sitefooter {
-  padding: 4rem 0 2rem;
+  padding: 7rem 0 4rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../images/footer_bg.jpg');
 }
 
 .bottomblock {
@@ -28,5 +32,43 @@
 }
 
 .copyright {
-  margin:4rem 0 0;
+  margin:0 0 0;
+  font-size: .875rem;
+}
+.flogo {
+  max-width:31rem;
+}
+.fsocials {
+  list-style-type: none;
+  margin:1.5rem auto 0;
+  padding:0;
+  font-size: .75rem;
+  line-height: 1;
+  font-weight: $global-weight-bold;
+  li {
+    display:inline-block;
+    width:6.5rem;
+    padding:0;
+    margin:0 0 2rem 0;
+    //background-color: red;
+    a {
+      //color:$white;
+      &:hover, &:focus {
+        //color:$primary-color;
+        i {
+          //color:$white;
+        }
+      }
+      i {
+        //color:$primary-color;
+        margin:0 auto .5rem;
+        display: block;
+        line-height: 2.5;
+        width:2.75em;
+        height:2.75em;
+        border-radius: 50%;
+        border:2px solid currentColor;
+      }
+    }
+  }
 }

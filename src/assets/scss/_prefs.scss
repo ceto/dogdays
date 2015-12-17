@@ -47,7 +47,10 @@
 $global-width: rem-calc(1600);
 $global-font-size: 100%;
 $global-lineheight: 1.5;
-$primary-color: #FF5300; //orange
+
+//$primary-color: #FF5300; //orange
+$primary-color: #f27321;
+
 $secondary-color: #4B4F54;
 $success-color: #3adb76;
 $warning-color: #ffae00;
@@ -65,7 +68,7 @@ $global-margin: 1rem;
 $global-padding: 1rem;
 $global-margin: 1rem;
 $global-weight-normal: 300;
-$global-weight-bold: 500;
+$global-weight-bold: 400;
 $global-radius: 0;
 $global-text-direction: ltr;
 $rem-base: 16px;
@@ -96,7 +99,7 @@ $block-grid-max: 8;
 // ------------------
 
 $header-font-family: $body-font-family;
-$header-font-weight: $global-weight-normal;
+$header-font-weight: $global-weight-bold;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (
@@ -104,7 +107,7 @@ $header-sizes: (
     'h1': 24,
     'h2': 20,
     'h3': 19,
-    'h4': 18,
+    'h4': 19,
     'h5': 17,
     'h6': 16,
   ),
@@ -112,13 +115,14 @@ $header-sizes: (
     'h1': 40,
     'h2': 31,
     'h3': 25,
-    'h4': 20,
-    'h5': 18,
+    'h4': 25,
+    'h5': 22,
     'h6': 16,
   ),
 );
-$header-color: inherit;
+$header-color: $primary-color;
 $header-lineheight: 1.25;
+$header-margin-top: 3rem;
 $header-margin-bottom: 0.5rem;
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;

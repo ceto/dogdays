@@ -5,15 +5,16 @@
   text-align: right;
   @include breakpoint(medium){
     float:right;
+    font-size: 112.5%;
   }
 }
 
 .menu {
   > li {
     > a {
-      text-transform: uppercase;
+      //text-transform: lowercase;
       font-weight: $global-weight-bold;
-      color:$body-font-color;
+      color:$white;
     }
   }
 }

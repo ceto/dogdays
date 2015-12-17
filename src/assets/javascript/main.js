@@ -1,49 +1,3 @@
-$('.photostrip').owlCarousel({
-    //rtl:true,
-    loop:true,
-    margin:0,
-
-    //nav:false,
-    autoWidth:true,
-    responsive:{
-        0:{
-            items:3
-        },
-        768: {
-            items:4
-        },
-        1200: {
-            items:6
-        },
-        1600: {
-            items:8
-        }
-    }
-});
-
-$('.feats').owlCarousel({
-    //rtl:true,
-    //loop:true,
-    margin:0,
-    autoplay:false,
-    autoplayTimeout:5000,
-    autoplayHoverPause:true,
-    smartSpeed: 500,
-    animateOut: 'fadeOut',
-    animateIn: 'fadeIn',
-
-    //nav:false,
-    //autoWidth:true,
-    responsive:{
-      0:{
-          items:1
-      }
-    },
-    URLhashListener:true,
-    startPosition: 'URLHash'
-});
-
-
 var $grid = $('.lookbookgrid').isotope({
   itemSelector: '.grid-item',
   percentPosition: true,
@@ -59,26 +13,23 @@ $grid.imagesLoaded().progress( function() {
 });
 
 
-
-
-  // $('.lookbookgrid').isotope({
-  //   itemSelector: '.grid-item',
-  //   percentPosition: true,
-  //   masonry: {
-  //     columnWidth: '.grid-sizer',
-  //     gutter: 0
-  //   }
-  // });
-
-// $('.photostrip img').each( function(){
-//     $(this).parents('.item').css('width', $(this).attr('data-ratio')*400 );
-// });
-
 $('document').ready(function(){
-
-  console.log('It is main.js Hello world!');
-
-
-
+  $('.lookbookgrid').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'mfp-img-mobile',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+      titleSrc: function(item) {
+        return /*item.el.children().attr('alt') + */'<small>&copy DogDays Yoga Wear</small>';
+      }
+    }
+  });
 
 });

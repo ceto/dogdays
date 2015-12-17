@@ -23,7 +23,7 @@ import {stream as wiredep} from 'wiredep';
 // 'gulp clean:gzip' -- erases all the gzipped files
 // 'gulp clean:metadata' -- deletes the metadata file for Jekyll
 gulp.task('clean:assets', () => {
-  return del(['.tmp/**/*', '!.tmp/assets', '!.tmp/assets/images', '!.tmp/assets/images/**/*', 'dist/assets']);
+  return del(['.tmp/**/*', '!.tmp/assets', '!.tmp/assets/images', '!.tmp/assets/images/**/*',  '!.tmp/assets/fonts', '!.tmp/assets/fonts/**/*', 'dist/assets']);
 });
 gulp.task('clean:dist', () => {
   return del(['dist/']);
@@ -103,9 +103,9 @@ gulp.task('scripts', () =>
     'bower_components/what-input/what-input.js',
     'bower_components/wow/dist/wow.js',
     'bower_components/foundation-sites/dist/foundation.js',
-    'bower_components/owl.carousel/dist/owl.carousel.js',
     'bower_components/isotope/dist/isotope.pkgd.js',
     'bower_components/imagesloaded/imagesloaded.js',
+    'bower_components/magnific-popup/dist/jquery.magnific-popup.js',
     'src/assets/javascript/vendor.js',
     'src/assets/javascript/main.js'
   ])
@@ -211,30 +211,6 @@ gulp.task('lint', () =>
 );
 
 
-// inject bower components
-gulp.task('bower', done => {
-
-  gulp.src('src/assets/scss/style.scss')
-    .pipe(wiredep({
-      ignorePath: /^(\.\.\/)+/
-    }))
-    .pipe(gulp.dest('src/assets/scss'));
-
-  gulp.src('src/_includes/head.html')
-    .pipe(wiredep({
-      ignorePath: /^(\.\.\/)*\.\./
-    }))
-    .pipe(gulp.dest('src/_includes'));
-
-  gulp.src('src/_includes/foot.html')
-    .pipe(wiredep({
-      ignorePath: /^(\.\.\/)*\.\./
-    }))
-    .pipe(gulp.dest('src/_includes'));
-
-  done();
-});
-
 
 // 'gulp serve' -- open up your website in your browser and watch for changes
 // in all your files and update them when needed
@@ -251,7 +227,6 @@ gulp.task('serve', () => {
   });
 
   // Watch various files for changes and do the needful
-  gulp.watch('bower.json', gulp.series('assets','jekyll'));
   gulp.watch(['src/**/*.md', 'src/**/*.html', 'src/**/*.yml'], gulp.series('jekyll', reload));
   gulp.watch(['src/**/*.xml', 'src/**/*.txt'], gulp.series('jekyll'));
   gulp.watch('src/assets/javascript/**/*.js', gulp.series('scripts'));
@@ -263,8 +238,8 @@ gulp.task('serve', () => {
 // 'gulp assets --prod' -- cleans out your assets and rebuilds them with
 // production settings
 gulp.task('assets', gulp.series(
-  gulp.series('clean:assets','bower'),
-  gulp.parallel('styles', 'scripts', 'fonts', 'images')
+  gulp.series('clean:assets'),
+  gulp.parallel('styles', 'scripts', 'images', 'fonts')
 ));
 
 // 'gulp assets:copy' -- copes the assets into the dist folder, needs to be

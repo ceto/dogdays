@@ -1,5 +1,4 @@
 .siteheader {
-
   position: absolute;
   left:0;
   top:0;
@@ -12,27 +11,30 @@
 
 .sitelogo {
   overflow: hidden;
-  text-indent: 101%;
+  text-indent: 200%;
   white-space: nowrap;
 
   display: block;
   background-position: left center;
   background-repeat: no-repeat;
-  background-image: url('../images/logo_only.png');
+  background-image: url('../images/logo_2line.svg');
   background-size: auto 100%;
-  width:2rem;
-  height: 2rem;
+  width:9rem;
+  height:2.5rem;
+  margin:1rem 1rem;
   //background-color: rgba($primary-color,.5);
   @include breakpoint(medium) {
-    margin:1rem 0;
-    height:5rem;
-    width:10rem;
+    background-image: url('../images/logo_2line.svg');
+    margin:1.5rem 5% 0;
+    height:3.5rem;
+    width:13rem;
   }
 }
 
 .sitenav {
+
   @include clearfix();
   @include breakpoint(medium) {
-    margin:2rem 0;
+    margin:1.25rem 2% 0;
   }
 }

@@ -25,12 +25,15 @@
   padding:8rem 0;
 }
 .ps--kispad {
- padding:4rem 0;
+ padding:6rem 0 6.5rem;
 }
 
+.lightblock {
+  background-color: #eaeaea;
+}
 .inverseblock {
   background-color: $primary-color;
-  color:$white;
+  color:#fff;
 }
 
 .grayblock {
@@ -51,27 +54,31 @@
 
 
 .featblock__ill {
+  //background-color: $primary-color;
 
   margin:0 -1.25rem;
-  text-align: right;
+  text-align: left;
   overflow: hidden;
   @include breakpoint(medium) {
     margin:0;
     position: absolute;
+    z-index: 0;
     width:33.333%;
     right:0;
     top:0;
     bottom:0;
 
-    .featblock--flip & {
-      right:auto;
-      left:0;
-      text-align: left;
+    .featblock--taska & {
+      width:55%;
     }
+
   }
 
-  @include breakpoint(xlarge) {
-   width: 40%;
+  @include breakpoint(large) {
+   width: 50%;
+   .featblock--taska & {
+      width:52%;
+   }
   }
 
   @include breakpoint(xxlarge) {
@@ -79,7 +86,8 @@
   }
   img {
     @include breakpoint(medium) {
-      //float:right;
+      //float:left;
+      //display: none;
       width:auto;
       max-width: none;
       height: 100%;
@@ -87,26 +95,19 @@
   }
 }
 .featblock__text {
-  background-color: #fff;
   padding:2rem 0;
-  //position: relative;
+  position: relative;
+  z-index: 1;
   //max-width: 45rem;
   @include breakpoint(medium) {
-    height: 100vh;
-    max-height: 45rem;
-    .featblock--flip & {
-    }
+    height: 48rem;
+    max-height: 50rem;
   }
   @include breakpoint(large) {
-    padding:4rem 0;
+    height: 100vh;
+    padding:4rem 12% 4rem 0;
   }
 
-  .featblock--narrow &{
-    @include breakpoint(medium) {
-      height: 66vh;
-      max-height: 35rem;
-    }
-  }
 }
 
 
@@ -120,22 +121,8 @@
 
 }
 
-.photostrip {
-  margin:0 0 0;
-  img {
-    // width: auto;
-    // max-width: none;
-    // max-height:100%;
-    // height:100%;
-  }
-
-  .item a {
-    // display: inline-block;
-    // position: relative;
-    // height: 20rem;
-    // max-height: 33vh;
-    // background-color: red;
-  }
+.looksec {
+  //background-image:
 }
 
 .thelookbook {
@@ -155,7 +142,7 @@
   @include breakpoint(tablet) {
     width: 33.333%;
   }
-  @include breakpoint(xxlarge) {
+  @include breakpoint(xlarge) {
     width: 25%;
   }
 
@@ -169,11 +156,25 @@
   @include breakpoint(large) {
     padding:.75rem;
   }
-  @include breakpoint(xxlarge) {
+  @include breakpoint(xlarge) {
     width: 25%;
   }
   > a {
     display: block;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    &:hover, &:focus {
+      cursor: -webkit-zoom-in;
+      cursor: -moz-zoom-in;
+      cursor: zoom-in;
+      img {
+        transform:scale(1.125);
+      }
+    }
+    img {
+      display: block;
+      transition: all .2s ease;
+    }
   }
 }
 
@@ -182,7 +183,25 @@
   @include breakpoint(tablet) {
     width: 66.666%;
   }
-  @include breakpoint(xxlarge) {
+  @include breakpoint(xlarge) {
     width: 50%;
+  }
+}
+
+.slog2 {
+ opacity:.75;
+}
+
+.imadunk {
+  font-weight:$global-weight-bold;
+  opacity: .666;
+  margin-top: 1.333rem;
+  font-size: 1.25rem;
+  line-height: 1.75;
+  margin-bottom: 0;
+  @include breakpoint(tablet) {
+    font-size: 1.4rem;
+    margin-top: 2%;
+    margin-left: 2rem;
   }
 }
