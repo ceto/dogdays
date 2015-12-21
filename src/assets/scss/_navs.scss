@@ -15,6 +15,9 @@
       //text-transform: lowercase;
       font-weight: $global-weight-bold;
       color:$white;
+      &:hover, &:focus {
+        color:$primary-color;
+      }
     }
   }
 }
