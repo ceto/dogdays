@@ -2,7 +2,7 @@
 # Can be used in your theme by calling 'site.title' and so on
 name: dogdays
 description: Custom website for dogdayswear.com
-url: http://dogdays.szabogabi.com
+url: http://dogdayswear.com
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
 source: src
